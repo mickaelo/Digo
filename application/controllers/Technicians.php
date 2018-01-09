@@ -27,4 +27,10 @@ class Technicians extends CI_Controller
         $this->load->view('script');
     }
 
+    public function edit()
+    {
+        $this->load->view('head');
+        $this->load->view('technicians/edit');
+        $this->load->view('script');
+    }
 }
