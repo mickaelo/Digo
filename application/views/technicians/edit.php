@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group">
                     <label for="select">Compétences</label>
-                    <select id="select" class="js-example-basic-multiple" name="competences" multiple="multiple">
+                    <select id="select" class="js-example-basic-multiple" name="competences[]" multiple="multiple">
                         <option value="AL">Alabama</option>
                         <option value="WY">Wyoming</option>
                     </select>

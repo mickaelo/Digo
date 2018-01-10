@@ -58,8 +58,11 @@ class Technicians extends CI_Controller
         $prenom   = $this->input->post('prenom');
         $email   = $this->input->post('email');
         $competences   = $this->input->post('competences');
-
-        $this->Technicians_model->creer_technicien($nom, $prenom, $email, $competences);
+        $array_competences = '';
+        foreach($competences as $competence){
+            $array_competences .= $competence.';';
+        }
+        $this->Technicians_model->creer_technicien($nom, $prenom, $email, $array_competences);
 
         redirect(base_url('technicians'));
     }
