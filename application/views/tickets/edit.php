@@ -1,16 +1,15 @@
 <div class="container">
     <br>
-    <h2>Création ticket</h2>
+    <h2>Création de ticket</h2>
 
     <form method="post" action="<?php echo base_url('tickets/new_ticket')?>">
         <div class="row">
             <div class="col-4 col-sm-4">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nom</label>
+                    <label for="exampleInputEmail1">Signalé par</label>
                     <input name="nom" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nom">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Prénom</label>
                     <input name="prenom" type="text" class="form-control" id="exampleInputEmail1" placeholder="Prénom">
                 </div>
             </div>
@@ -21,7 +20,7 @@
                 </div>
                 <div class="form-group">
                     <label for="comment">Description du ticket</label>
-                    <textarea name="description" class="form-control" rows="5" id="comment"></textarea>
+                    <textarea name="description" class="form-control" placeholder="Description" rows="5" id="comment"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="sel1">Priorité :</label>

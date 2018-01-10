@@ -24,6 +24,26 @@ class Technicians_model extends CI_Model
         return $query;
     }
 
+    public function detail_technicien($id)
+    {
+        $this->db->select('*')
+            ->from('techniciens')
+            ->where('id_technicien', $id);
+
+        $query = $this->db->get()->result_array();
+        return $query;
+    }
+
+    public function detail_ticket_technicien($id)
+    {
+        $this->db->select('*')
+            ->from('tickets')
+            ->where('id_technicien', $id);
+
+        $query = $this->db->get()->result_array();
+        return $query;
+    }
+
     public function creer_technicien($nom, $prenom, $email, $competences)
     {
         $data = array(

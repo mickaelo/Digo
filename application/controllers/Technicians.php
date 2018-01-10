@@ -36,10 +36,12 @@ class Technicians extends CI_Controller
         $this->load->view('script');
     }
 
-    public function details()
+    public function details($id)
     {
+        $data['technician'] = $this->Technicians_model->detail_technicien($id);
+        $data['tickets_technician'] = $this->Technicians_model->detail_ticket_technicien($id);
         $this->load->view('head');
-        $this->load->view('technicians/details');
+        $this->load->view('technicians/details', $data);
         $this->load->view('script');
     }
 
