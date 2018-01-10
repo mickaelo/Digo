@@ -64,6 +64,10 @@ class Technicians extends CI_Controller
         }
         $this->Technicians_model->creer_technicien($nom, $prenom, $email, $array_competences);
 
+        $this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+  <strong>Technician crée.</strong> Vous pouvez consulter les techniciens dans la liste ci-dessous
+</div>');
+
         redirect(base_url('technicians'));
     }
 }

@@ -52,7 +52,9 @@ class Tickets extends CI_Controller {
         $urgence   = $this->input->post('urgence');
 
         $this->Tickets_model->creer_ticket($signal, $objet, $description, $priorite, $urgence);
-
+        $this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+  <strong>Ticket crée.</strong> Vous pouvez consulter le ticket dans la liste ci-dessous
+</div>');
         redirect(base_url('tickets'));
     }
 

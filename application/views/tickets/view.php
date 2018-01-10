@@ -1,7 +1,7 @@
 <div class="container">
     <br>
     <h2>Demandes en cours</h2>
-
+    <?php echo $this->session->flashdata('msg'); ?>
     <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
         <tr>
