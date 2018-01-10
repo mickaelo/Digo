@@ -19,10 +19,20 @@ class Tickets extends CI_Controller {
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+
+    function __construct()
+    {
+        parent::__construct();
+
+        $this->load->model('Tickets_model');
+
+    }
+
     public function index()
     {
+        $data['tickets'] = $this->Tickets_model->recuperer_tickets();
         $this->load->view('head');
-        $this->load->view('tickets/view');
+        $this->load->view('tickets/view', $data);
         $this->load->view('script');
     }
 
@@ -31,6 +41,19 @@ class Tickets extends CI_Controller {
         $this->load->view('head');
         $this->load->view('tickets/edit');
         $this->load->view('script');
+    }
+
+    public function new_ticket()
+    {
+        $signal   = $this->input->post('nom').' '.$this->input->post('prenom');
+        $objet   = $this->input->post('objet');
+        $description   = $this->input->post('description');
+        $priorite   = $this->input->post('priorite');
+        $urgence   = $this->input->post('urgence');
+
+        $this->Tickets_model->creer_ticket($signal, $objet, $description, $priorite, $urgence);
+
+        redirect(base_url('tickets'));
     }
 
 }

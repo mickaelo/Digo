@@ -20,10 +20,19 @@ class Technicians extends CI_Controller
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
 
+    function __construct()
+    {
+        parent::__construct();
+
+        $this->load->model('Technicians_model');
+
+    }
+
     public function index()
     {
+        $data['technicians'] = $this->Technicians_model->recuperer_techniciens();
         $this->load->view('head');
-        $this->load->view('technicians/view');
+        $this->load->view('technicians/view', $data);
         $this->load->view('script');
     }
 
@@ -39,5 +48,17 @@ class Technicians extends CI_Controller
         $this->load->view('head');
         $this->load->view('technicians/edit');
         $this->load->view('script');
+    }
+
+    public function new_technician()
+    {
+        $nom   = $this->input->post('nom');
+        $prenom   = $this->input->post('prenom');
+        $email   = $this->input->post('email');
+        $competences   = $this->input->post('competences');
+
+        $this->Technicians_model->creer_technicien($nom, $prenom, $email, $competences);
+
+        redirect(base_url('technicians'));
     }
 }

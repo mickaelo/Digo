@@ -1,9 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<body>
-<div id="container">
-	<h1>ICI ON CREER LE TICKET SAMERl</h1>
+
+<div class="container">
+	<br>
+	<h2>Tableau de bord</h2>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
@@ -16,7 +17,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
-</body>

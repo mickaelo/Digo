@@ -5,7 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Welcome to CodeIgniter</title>
+    <link rel="icon" type="image/png" href="<?=base_url()?>assets/img/logo.jpg" />
+    <title>HelpDesk</title>
     <link href="<?=base_url()?>/assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/css/font-awesome.min.css">
@@ -13,14 +14,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/css/imagehover.min.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <!--Navigation bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <img alt="Logo" src="<?=base_url()?>assets/img/logo.jpg"height="100" width="100"/>
-    <a class="navbar-brand" href="#">&nbsp;&nbsp;Service HelpDesk</a>
+    <a class="navbar-brand" href="<?=base_url()?>">&nbsp;&nbsp;Service HelpDesk</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -48,3 +48,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </ul>
     </div>
 </nav>
+<body>
