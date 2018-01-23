@@ -19,9 +19,16 @@
                 </div>
                 <div class="form-group">
                     <label for="select">Compétences</label>
-                    <select id="select" class="js-example-basic-multiple" name="competences[]" multiple="multiple">
-                        <option value="AL">Alabama</option>
-                        <option value="WY">Wyoming</option>
+                    <select id="select" class="js-example-basic-multiple form-control" name="competences[]" multiple="multiple">
+                        <option value="php">PHP</option>
+                        <option value="html">HTML</option>
+                        <option value="serveur">Serveur</option>
+                        <option value="système">Système</option>
+                        <option value="reseau">Réseau</option>
+                        <option value="linux">Linux</option>
+                        <option value="debian">Debian</option>
+                        <option value="ubuntu">Ubuntu</option>
+                        <option value="centos">Centos</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Ajouter technicien</button>

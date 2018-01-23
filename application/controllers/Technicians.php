@@ -59,14 +59,18 @@ class Technicians extends CI_Controller
         $email   = $this->input->post('email');
         $competences   = $this->input->post('competences');
         $array_competences = '';
+        $count = 0;
         foreach($competences as $competence){
-            $array_competences .= $competence.';';
+            if ($count != 0){
+              $array_competences .= ','.$competence;
+            } else {
+              $array_competences .= $competence;
+            }
+            $count++;
         }
         $this->Technicians_model->creer_technicien($nom, $prenom, $email, $array_competences);
 
-        $this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
-  <strong>Technician crée.</strong> Vous pouvez consulter les techniciens dans la liste ci-dessous
-</div>');
+        $this->session->set_flashdata('message-success', '<strong>Technician crée.</strong> Vous pouvez consulter les techniciens dans la liste ci-dessous');
 
         redirect(base_url('technicians'));
     }

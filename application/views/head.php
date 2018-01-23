@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 </head>
-
+<body>
 <!--Navigation bar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <img alt="Logo" src="<?=base_url()?>assets/img/logo.jpg"height="100" width="100"/>
@@ -48,4 +48,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </ul>
     </div>
 </nav>
-<body>
+<div class="container" style="margin-top:25px;">
+<?php if (!empty($this->session->flashdata('message-error'))): ?>
+    <div class="alert alert-error" role="alert">
+            <?php echo $this->session->flashdata('message-error');?>
+    </div>
+<?php endif; ?>
+<?php if (!empty($this->session->flashdata('message-success'))): ?>
+    <div class="alert alert-success" role="alert">
+            <?php echo $this->session->flashdata('message-success');?>
+    </div>
+<?php endif; ?>
+</div>
