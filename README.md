@@ -1,1 +1,1 @@
-# digora
+# DIGO
